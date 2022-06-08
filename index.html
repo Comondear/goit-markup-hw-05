@@ -13,6 +13,7 @@
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css" />
+
 </head>
 <body>
     <header class="header">
@@ -40,7 +41,7 @@
         <section class="topsection">
             <div class="container">
             <h1 class="topsection-title">Эффективные решения <br> для вашего бизнеса</h1>
-            <button class="topsection-button" data-model-open>Заказать услугу</button>
+            <button class="topsection-button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <section class="features">
@@ -70,9 +71,18 @@
             <div class="container">
             <h2 class="wwd-title">Чем мы занимаемся</h2>
                 <ul class="wwd-list list">
-                    <li class="wwd-item"><img src="./img/box-1.jpg" alt="человека печатает1" width="370" height="294"></li>
-                    <li class="wwd-item"><img src="./img/box-2.jpg" alt="человека печатает2" width="370" height="294"></li>
-                    <li class="wwd-item"><img src="./img/box-3.jpg" alt="человека печатает3" width="370" height="294"></li>
+                    <li class="wwd-item">
+                        <h class="wwd-item-text">Десктопные приложения</h>
+                        <img class="wwd-item-img" src="./img/box-1.jpg" alt="человек печатает1" width="370" height="294">
+                    </li>
+                    <li class="wwd-item">
+                        <h class="wwd-item-text">Мобильные приложения</h>
+                        <img class="wwd-item-img" src="./img/box-2.jpg" alt="человек печатает2" width="370" height="294">
+                    </li>
+                    <li class="wwd-item">
+                        <h class="wwd-item-text">Дизайнерские решения</h>
+                        <img class="wwd-item-img" src="./img/box-3.jpg" alt="человек печатает3" width="370" height="294">
+                    </li>
                 </ul>
                 </div>
             </section>
@@ -256,14 +266,8 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <p>Компания Microsoft в последние годы выпускает большое количество обновлений для Windows 10. К сожалению, не
-                все из них
-                после установки работают как нужно. Возникает много различных ошибок, которые иногда просто невозможно
-                исправить
-                вручную.
-            </p>
-            <button class="close-modal-button" data-model-close>
-                <svg class="link-icon-close"><use href="./img/svg/close-black.svg"></use></svg></button>
+            <button class="close-modal-button" data-modal-close>
+                <svg class="link-icon-close"><use href="./img/svg/icons.svg#icon-close-black"></use></svg></button>
         </div>
     </div>
     </div>
