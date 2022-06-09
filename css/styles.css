@@ -105,6 +105,7 @@ body {
   padding-bottom: 32px;
   padding-top: 32px;
   position: relative;
+  transition: 250ms color var(--timing-animation);
 }
 
 .current::after {
@@ -148,6 +149,7 @@ body {
 .header-link-icon {
   margin-right: 10px;
   fill: currentColor;
+  transition: 250ms fill var(--timing-animation);
 }
 
 .header-link:hover,
@@ -159,6 +161,7 @@ body {
 .header-link-icon:hover,
 .header-link-icon:focus {
   color: var(--second-text-color);
+  fill: var(--second-text-color);
 }
 
 .current {
@@ -261,6 +264,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
+  visibility: visible;
   transition: transform 250ms var(--timing-animation),
     opacity 250ms var(--timing-animation), scale 250ms var(--timing-animation);
   background-color: #ffffff;
@@ -272,6 +276,7 @@ body {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.2);
   opacity: 0;
+  visibility: hidden;
 }
 
 .close-modal-button {
@@ -344,11 +349,16 @@ body {
   background-image: url(../img/svg/astronaut1.svg);
 }
 
+.feature-icon-1::before .backgroung-image {
+}
+
 .feature-icon-1:hover::before,
 .feature-icon-2:hover::before,
 .feature-icon-3:hover::before,
 .feature-icon-4:hover::before {
   animation: testrotate 1s infinite alternate linear;
+  animation-duration: 1000ms;
+  animation-delay: 250ms;
 }
 
 @keyframes testrotate {
@@ -517,10 +527,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 250ms background-color var(--timing-animation);
 }
 
 .social-icon {
   fill: #afb1b8;
+  transition: 250ms fill var(--timing-animation);
 }
 
 .team-icon-link:hover,
@@ -568,10 +580,12 @@ body {
   align-items: center;
   justify-content: center;
   margin-right: 30px;
+  transition: 250ms border-color var(--timing-animation);
 }
 
 .partners-icon {
   fill: #afb1b8;
+  transition: 250ms fill var(--timing-animation);
 }
 
 .partners-link:hover,
@@ -635,6 +649,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff;
+  transition: 250ms color var(--timing-animation);
 }
 
 .footer-item-mail {
@@ -643,6 +658,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: 250ms color var(--timing-animation);
 }
 
 .footer-item-tel {
@@ -651,6 +667,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: 250ms color var(--timing-animation);
 }
 
 .footer-item-address:hover,
@@ -692,6 +709,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 250ms background-color var(--timing-animation);
 }
 
 .social-icons-list {
@@ -737,6 +755,9 @@ body {
   padding: 6px 22px;
   border-radius: 4px;
   border: 1px solid transparent;
+  transition: 250ms background-color var(--timing-animation),
+    250ms box-shadow var(--timing-animation),
+    250ms color var(--timing-animation);
 }
 
 .gallery-buttons-link:hover,
@@ -744,6 +765,7 @@ body {
   background-color: var(--second-text-color);
   box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
     0px 3px 1px 0px #0000001a;
+  color: #ffffff;
 }
 
 .gallery-buttons-item:not(:last-child) {
@@ -832,11 +854,6 @@ body {
   color: #757575;
   margin-top: 4px;
   margin-left: 24px;
-}
-
-.gallery-buttons-link:hover,
-.gallery-buttons-link:focus {
-  color: #ffffff;
 }
 
 .current-button {
